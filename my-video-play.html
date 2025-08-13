@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Class — Fun Learning for Kids</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/my-video-play.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div
+        class="container"
+        style="display: flex; justify-content: space-between"
+      >
+        <a class="brand" href="index.html">
+          <div class="logo">
+            <img src="./img/logo.png" class="img-fluid" width="54px" alt="SW" />
+          </div>
+          <div>
+            <div class="brand-name">Schoolwala</div>
+            <small>Fun tuition for curious kids</small>
+          </div>
+        </a>
+
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="school-tuitions.html">School Tuitions</a></li>
+            <li><a href="my-class.html">My Class</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a class="btn-outline" href="login.html">Login/Reg</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- VIDEO PLAY -->
+    <div class="container">
+
+      <!-- Video Player -->
+      <div class="video-player-container">
+        <div class="video-wrapper">
+          <div class="video-player">
+            <iframe
+              src="https://www.youtube.com/embed/E3oG313_kps?si=mA1vie_IPCPwfeHv"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="video-info">
+          <h1 class="video-title">Introduction to Large Numbers</h1>
+
+          <div class="video-meta">
+            <div class="meta-item"><i class="fas fa-eye"></i> 1,245 views</div>
+            <div class="meta-item"><i class="fas fa-clock"></i> 5:24 min</div>
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i> Published: Oct 15, 2023
+            </div>
+          </div>
+
+          <div class="video-actions">
+            <button class="action-btn" id="likeButton">
+              <i class="fas fa-thumbs-up"></i> Like this video
+            </button>
+            <button class="action-btn">
+              <i class="fas fa-share-alt"></i> Share
+            </button>
+            <button class="action-btn">
+              <i class="fas fa-download"></i> Download Notes
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback Section -->
+      <div class="feedback-section">
+        <h2 class="section-title">Your Feedback</h2>
+        <div class="feedback-form">
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label class="form-label"
+                >How much did you enjoy this video?</label
+              >
+              <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1"><i class="fas fa-star"></i></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback" class="form-label"
+                >What did you think of this video?</label
+              >
+              <textarea
+                id="feedback"
+                class="form-control"
+                placeholder="Your thoughts, questions, or suggestions..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn-submit">Submit Feedback</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- APP PROMOTION -->
+    <section class="app-section">
+      <div
+        class="container app-flex"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div class="app-content">
+          <h2>Learning At Your Pace<br />Anytime, Anywhere</h2>
+          <p>Download the SchoolWala App - India's Popular Learning Platform</p>
+          <a href="#" target="_blank">
+            <img
+              src="./img/play.png"
+              alt="Get it on Google Play"
+              class="play-btn2"
+              style="border-radius: 5px"
+            />
+          </a>
+        </div>
+
+        <div class="app-images">
+          <img
+            src="./img/mobile-ad-strip.png"
+            alt="App Screenshot"
+            class="phone phone-front"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img
+                src="./img/logo.png"
+                class="img-fluid"
+                width="54px"
+                alt="SW"
+              />
+            </div>
+            <div>
+              <div class="brand-name">Schoolwala</div>
+              <div class="tagline">Making learning delightful</div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 Schoolwala. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#">FB</a>
+            <a href="#">IG</a>
+            <a href="#">YT</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
