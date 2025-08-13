@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Player - Schoolwala</title>
+  <title>Test Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -75,128 +75,166 @@
       font-weight: 600;
     }
 
-    /* Video Player */
-    .video-player-container {
-      margin: 30px 0 50px;
+    /* Profile Header */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 40px 0;
+      flex-wrap: wrap;
     }
 
-    .video-wrapper {
+    .avatar-container {
       position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, var(--sun), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
       box-shadow: var(--shadow-hover);
-      background: #000;
     }
 
-    .video-player {
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      position: relative;
-    }
-
-    .video-player iframe {
+    .avatar-decoration {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      animation: floaty 4s ease-in-out infinite;
     }
 
-    /* Video Info */
-    .video-info {
-      margin-top: 25px;
+    .decoration-1 {
+      top: -10px;
+      right: 10px;
+      background: var(--pink);
+      color: var(--white);
+      font-size: 1.2rem;
+      animation-delay: 0.2s;
     }
 
-    .video-title {
-      font-family: 'Baloo 2', cursive;
-      font-size: 2.2rem;
-      margin-bottom: 15px;
+    .decoration-2 {
+      bottom: 0;
+      left: -10px;
+      background: var(--sky);
+      color: var(--white);
+      font-size: 1.5rem;
+      animation-delay: 0.5s;
+    }
+
+    .decoration-3 {
+      bottom: -15px;
+      right: 20px;
+      background: var(--mint);
       color: var(--text);
+      font-size: 1.3rem;
+      animation-delay: 0.8s;
+    }
+
+    .profile-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .profile-name {
+      font-family: 'Baloo 2', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
       position: relative;
       display: inline-block;
     }
 
-    .video-title::after {
+    .profile-name::after {
       content: '';
       position: absolute;
-      bottom: 2px;
+      bottom: 5px;
       left: 0;
       width: 100%;
-      height: 10px;
+      height: 12px;
       background: rgba(255, 138, 0, 0.2);
       z-index: -1;
       border-radius: 4px;
     }
 
-    .video-meta {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    .profile-bio {
+      color: var(--text-light);
       margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .profile-stats {
+      display: flex;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
-    .meta-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-light);
-      font-size: 0.95rem;
-    }
-
-    .video-description {
+    .stat-card {
       background: var(--white);
       border-radius: var(--radius-sm);
-      padding: 20px;
+      padding: 15px 25px;
       box-shadow: var(--shadow);
-      margin-top: 25px;
-      line-height: 1.7;
-      color: var(--text-light);
-    }
-
-    /* Actions */
-    .video-actions {
-      display: flex;
-      gap: 15px;
-      margin: 25px 0;
-      flex-wrap: wrap;
-    }
-
-    .action-btn {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: none;
+      gap: 15px;
+      min-width: 180px;
+    }
+
+    .stat-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
       background: rgba(255, 138, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
       color: var(--accent);
     }
 
-    .action-btn:hover {
-      background: rgba(255, 138, 0, 0.2);
-      transform: translateY(-3px);
+    .stat-content {
+      flex: 1;
     }
 
-    .action-btn.liked {
-      background: rgba(255, 122, 162, 0.2);
-      color: var(--pink);
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 3px;
     }
 
-    /* Feedback Section */
-    .feedback-section {
-      margin: 50px 0;
+    .stat-label {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Sections */
+    .section {
+      margin: 60px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     .section-title {
       font-family: 'Baloo 2', cursive;
-      font-size: 1.8rem;
-      margin-bottom: 25px;
+      font-size: 2rem;
       position: relative;
       display: inline-block;
     }
@@ -213,195 +251,330 @@
       border-radius: 4px;
     }
 
-    .feedback-form {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-group {
-      margin-bottom: 25px;
-    }
-
-    .form-label {
-      display: block;
-      margin-bottom: 10px;
+    .section-link {
+      color: var(--accent);
+      text-decoration: none;
       font-weight: 600;
-      color: var(--text);
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 14px 18px;
-      border: 2px solid #e5e7eb;
-      border-radius: var(--radius-sm);
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .form-control:focus {
-      border-color: var(--sky);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(96, 194, 255, 0.2);
-    }
-
-    textarea.form-control {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    .rating {
       display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
+      align-items: center;
+      gap: 8px;
     }
 
-    .rating input {
-      display: none;
+    .section-link:hover {
+      text-decoration: underline;
     }
 
-    .rating label {
-      font-size: 2rem;
-      color: #e5e7eb;
-      cursor: pointer;
-      transition: color 0.3s ease;
+    /* Badges */
+    .badges-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .rating input:checked ~ label {
-      color: #e5e7eb;
-    }
-
-    .rating label:hover,
-    .rating label:hover ~ label,
-    .rating input:checked ~ label {
-      color: var(--sun);
-    }
-
-    .btn-submit {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--white);
-      padding: 14px 35px;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: none;
-      box-shadow: 0 6px 18px rgba(255, 138, 0, 0.2);
-    }
-
-    .btn-submit:hover {
-      background: var(--accent-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 138, 0, 0.3);
-    }
-
-    /* Related Videos */
-    .related-section {
-      margin: 60px 0 40px;
-    }
-
-    .videos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .video-card {
+    .badge-card {
       background: var(--white);
       border-radius: var(--radius);
-      overflow: hidden;
+      padding: 25px;
       box-shadow: var(--shadow);
+      text-align: center;
+      width: 180px;
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    .video-card:hover {
+    .badge-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-hover);
     }
 
-    .video-thumb {
-      height: 160px;
-      background: linear-gradient(45deg, #60c2ff, #7ef6b5);
-      position: relative;
+    .badge-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, var(--sun), var(--accent));
     }
 
-    .play-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.8);
+    .badge-icon {
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
+      background: linear-gradient(45deg, var(--sky), var(--mint));
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent);
-      font-size: 1.5rem;
+      margin: 0 auto 15px;
+      font-size: 2rem;
+      color: var(--white);
     }
 
-    .video-card-content {
-      padding: 20px;
-    }
-
-    .video-card-title {
-      font-size: 1.1rem;
+    .badge-title {
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
-    .video-card-meta {
+    .badge-description {
       color: var(--text-light);
       font-size: 0.9rem;
     }
 
+    /* Progress */
+    .progress-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .subject-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 25px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--accent);
+    }
+
+    .subject-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .subject-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .subject-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(96, 194, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--sky);
+    }
+
+    .subject-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--sun), var(--accent));
+      border-radius: 5px;
+      width: 0;
+      transition: width 1s ease;
+    }
+
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Recent Activity */
+    .activity-list {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+
+    .activity-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      align-items: flex-start;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(126, 246, 181, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--mint);
+      flex-shrink: 0;
+    }
+
+    .activity-content {
+      flex: 1;
+    }
+
+    .activity-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .activity-description {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .activity-time {
+      color: var(--text-light);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Goals */
+    .goals-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .goal-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 25px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid var(--mint);
+    }
+
+    .goal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--mint), var(--sky));
+    }
+
+    .goal-title {
+      font-weight: 600;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .goal-progress {
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .goal-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--mint), var(--sky));
+      border-radius: 4px;
+      width: 0;
+      transition: width 1s ease;
+    }
+
+    .goal-info {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes floaty {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
     /* Responsive Design */
     @media (max-width: 992px) {
-      .video-title {
-        font-size: 1.8rem;
+      .profile-header {
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .profile-name::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+      }
+      
+      .profile-bio {
+        margin: 0 auto 20px;
+      }
+      
+      .profile-stats {
+        justify-content: center;
+      }
+      
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
     @media (max-width: 768px) {
-      .video-title {
-        font-size: 1.6rem;
+      .profile-name {
+        font-size: 2rem;
+      }
+      
+      .avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
       }
       
       .section-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
       
-      .video-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+      .badges-container {
+        justify-content: center;
       }
     }
 
     @media (max-width: 576px) {
-      .video-title {
-        font-size: 1.4rem;
-      }
-      
-      .video-actions {
-        flex-direction: column;
-      }
-      
-      .action-btn {
-        justify-content: center;
-      }
-      
-      .feedback-form {
-        padding: 20px;
-      }
-      
-      .rating label {
+      .profile-name {
         font-size: 1.8rem;
+      }
+      
+      .stat-card {
+        width: 100%;
+      }
+      
+      .badge-card {
+        width: 100%;
+        max-width: 250px;
       }
     }
   </style>
@@ -412,149 +585,309 @@
     <div class="breadcrumb">
       <a href="#"><i class="fas fa-home"></i> Home</a>
       <span>/</span>
-      <a href="#"><i class="fas fa-book-open"></i> Learning</a>
-      <span>/</span>
-      <a href="#"><i class="fas fa-calculator"></i> Mathematics</a>
-      <span>/</span>
-      <a href="#"><i class="fas fa-list-ol"></i> Chapter 1</a>
-      <span>/</span>
-      <span class="current"><i class="fas fa-play-circle"></i> Video Player</span>
+      <span class="current"><i class="fas fa-user"></i> My Profile</span>
     </div>
 
-    <!-- Video Player -->
-    <div class="video-player-container">
-      <div class="video-wrapper">
-        <div class="video-player">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <div class="avatar-container">
+        <div class="avatar">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="avatar-decoration decoration-1">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="avatar-decoration decoration-2">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="avatar-decoration decoration-3">
+          <i class="fas fa-trophy"></i>
         </div>
       </div>
       
-      <div class="video-info">
-        <h1 class="video-title">Introduction to Large Numbers</h1>
+      <div class="profile-info">
+        <h1 class="profile-name">Riya Sharma</h1>
+        <p class="profile-bio">Curious learner exploring the world of numbers and science! Currently in Class 6.</p>
         
-        <div class="video-meta">
-          <div class="meta-item">
-            <i class="fas fa-eye"></i> 1,245 views
+        <div class="profile-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number">128</div>
+              <div class="stat-label">Videos Watched</div>
+            </div>
           </div>
-          <div class="meta-item">
-            <i class="fas fa-clock"></i> 5:24 min
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number">4,560</div>
+              <div class="stat-label">Learning Points</div>
+            </div>
           </div>
-          <div class="meta-item">
-            <i class="fas fa-calendar"></i> Published: Oct 15, 2023
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number">42</div>
+              <div class="stat-label">Badges Earned</div>
+            </div>
           </div>
-        </div>
-        
-        <div class="video-actions">
-          <button class="action-btn" id="likeButton">
-            <i class="fas fa-thumbs-up"></i> Like this video
-          </button>
-          <button class="action-btn">
-            <i class="fas fa-share-alt"></i> Share
-          </button>
-          <button class="action-btn">
-            <i class="fas fa-download"></i> Download Notes
-          </button>
-        </div>
-        
-        <div class="video-description">
-          <p>In this fun and engaging lesson, we'll explore the world of large numbers! You'll learn:</p>
-          <ul>
-            <li>How to read and write numbers up to 10 lakhs (1,000,000)</li>
-            <li>The Indian place value system (Units, Tens, Hundreds, Thousands, Lakhs)</li>
-            <li>How to compare large numbers using greater than and less than symbols</li>
-            <li>Real-life examples of where we use large numbers</li>
-          </ul>
-          <p>Get ready to become a number ninja! By the end of this video, you'll be able to confidently handle big numbers in your everyday life.</p>
         </div>
       </div>
     </div>
 
-    <!-- Feedback Section -->
-    <div class="feedback-section">
-      <h2 class="section-title">Your Feedback</h2>
-      <div class="feedback-form">
-        <form id="feedbackForm">
-          <div class="form-group">
-            <label class="form-label">How much did you enjoy this video?</label>
-            <div class="rating">
-              <input type="radio" id="star5" name="rating" value="5">
-              <label for="star5"><i class="fas fa-star"></i></label>
-              <input type="radio" id="star4" name="rating" value="4">
-              <label for="star4"><i class="fas fa-star"></i></label>
-              <input type="radio" id="star3" name="rating" value="3">
-              <label for="star3"><i class="fas fa-star"></i></label>
-              <input type="radio" id="star2" name="rating" value="2">
-              <label for="star2"><i class="fas fa-star"></i></label>
-              <input type="radio" id="star1" name="rating" value="1">
-              <label for="star1"><i class="fas fa-star"></i></label>
-            </div>
+    <!-- Badges Section -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">My Achievements</h2>
+        <a href="#" class="section-link">
+          See all badges <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      
+      <div class="badges-container">
+        <!-- Badge 1 -->
+        <div class="badge-card">
+          <div class="badge-icon">
+            <i class="fas fa-star"></i>
           </div>
-          
-          <div class="form-group">
-            <label for="feedback" class="form-label">What did you think of this video?</label>
-            <textarea id="feedback" class="form-control" placeholder="Your thoughts, questions, or suggestions..."></textarea>
+          <h3 class="badge-title">Math Master</h3>
+          <p class="badge-description">Completed 50+ math lessons</p>
+        </div>
+        
+        <!-- Badge 2 -->
+        <div class="badge-card">
+          <div class="badge-icon">
+            <i class="fas fa-flask"></i>
           </div>
-          
-          <div class="form-group">
-            <button type="submit" class="btn-submit">Submit Feedback</button>
+          <h3 class="badge-title">Science Explorer</h3>
+          <p class="badge-description">Finished all science experiments</p>
+        </div>
+        
+        <!-- Badge 3 -->
+        <div class="badge-card">
+          <div class="badge-icon">
+            <i class="fas fa-book"></i>
           </div>
-        </form>
+          <h3 class="badge-title">Reading Champion</h3>
+          <p class="badge-description">Read 100+ storybooks</p>
+        </div>
+        
+        <!-- Badge 4 -->
+        <div class="badge-card">
+          <div class="badge-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="badge-title">Quick Learner</h3>
+          <p class="badge-description">Completed lessons in record time</p>
+        </div>
       </div>
     </div>
 
-    <!-- Related Videos -->
-    <div class="related-section">
-      <h2 class="section-title">More Videos in This Chapter</h2>
-      <div class="videos-grid">
-        <!-- Video 1 -->
-        <div class="video-card">
-          <div class="video-thumb">
-            <div class="play-icon">
-              <i class="fas fa-play"></i>
+    <!-- Progress Section -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Learning Progress</h2>
+        <a href="#" class="section-link">
+          View detailed report <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      
+      <div class="progress-grid">
+        <!-- Math -->
+        <div class="subject-card">
+          <div class="subject-header">
+            <div class="subject-icon">
+              <i class="fas fa-calculator"></i>
             </div>
+            <h3 class="subject-title">Mathematics</h3>
           </div>
-          <div class="video-card-content">
-            <div class="video-card-title">Comparing Numbers</div>
-            <div class="video-card-meta">6:42 min • 845 views</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%"></div>
+          </div>
+          <div class="progress-info">
+            <span>75% Completed</span>
+            <span>24 of 32 topics</span>
           </div>
         </div>
         
-        <!-- Video 2 -->
-        <div class="video-card">
-          <div class="video-thumb">
-            <div class="play-icon">
-              <i class="fas fa-play"></i>
+        <!-- Science -->
+        <div class="subject-card">
+          <div class="subject-header">
+            <div class="subject-icon">
+              <i class="fas fa-flask"></i>
             </div>
+            <h3 class="subject-title">Science</h3>
           </div>
-          <div class="video-card-content">
-            <div class="video-card-title">Number Patterns</div>
-            <div class="video-card-meta">7:18 min • 721 views</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%"></div>
+          </div>
+          <div class="progress-info">
+            <span>60% Completed</span>
+            <span>18 of 30 topics</span>
           </div>
         </div>
         
-        <!-- Video 3 -->
-        <div class="video-card">
-          <div class="video-thumb">
-            <div class="play-icon">
-              <i class="fas fa-play"></i>
+        <!-- English -->
+        <div class="subject-card">
+          <div class="subject-header">
+            <div class="subject-icon">
+              <i class="fas fa-book"></i>
             </div>
+            <h3 class="subject-title">English</h3>
           </div>
-          <div class="video-card-content">
-            <div class="video-card-title">Rounding Off Numbers</div>
-            <div class="video-card-meta">4:56 min • 932 views</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+          <div class="progress-info">
+            <span>85% Completed</span>
+            <span>17 of 20 topics</span>
           </div>
         </div>
         
-        <!-- Video 4 -->
-        <div class="video-card">
-          <div class="video-thumb">
-            <div class="play-icon">
-              <i class="fas fa-play"></i>
+        <!-- Social Studies -->
+        <div class="subject-card">
+          <div class="subject-header">
+            <div class="subject-icon">
+              <i class="fas fa-globe-asia"></i>
+            </div>
+            <h3 class="subject-title">Social Studies</h3>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 45%"></div>
+          </div>
+          <div class="progress-info">
+            <span>45% Completed</span>
+            <span>9 of 20 topics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Recent Activity</h2>
+        <a href="#" class="section-link">
+          View all activity <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      
+      <div class="activity-list">
+        <!-- Activity 1 -->
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="activity-content">
+            <h3 class="activity-title">Watched a video</h3>
+            <p class="activity-description">Introduction to Fractions in Mathematics</p>
+            <div class="activity-time">
+              <i class="fas fa-clock"></i> 2 hours ago
             </div>
           </div>
-          <div class="video-card-content">
-            <div class="video-card-title">Roman Numerals Adventure</div>
-            <div class="video-card-meta">6:31 min • 1,102 views</div>
+        </div>
+        
+        <!-- Activity 2 -->
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <div class="activity-content">
+            <h3 class="activity-title">Earned a badge</h3>
+            <p class="activity-description">Math Master for completing Algebra chapter</p>
+            <div class="activity-time">
+              <i class="fas fa-clock"></i> Yesterday
+            </div>
+          </div>
+        </div>
+        
+        <!-- Activity 3 -->
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="activity-content">
+            <h3 class="activity-title">Completed a quiz</h3>
+            <p class="activity-description">Scored 90% on Fractions practice test</p>
+            <div class="activity-time">
+              <i class="fas fa-clock"></i> 2 days ago
+            </div>
+          </div>
+        </div>
+        
+        <!-- Activity 4 -->
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <div class="activity-content">
+            <h3 class="activity-title">Read a story</h3>
+            <p class="activity-description">Finished reading "The Magic Treehouse"</p>
+            <div class="activity-time">
+              <i class="fas fa-clock"></i> 3 days ago
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Goals Section -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">My Learning Goals</h2>
+        <a href="#" class="section-link">
+          Set new goals <i class="fas fa-plus"></i>
+        </a>
+      </div>
+      
+      <div class="goals-container">
+        <!-- Goal 1 -->
+        <div class="goal-card">
+          <h3 class="goal-title">
+            <i class="fas fa-calculator"></i> Master Multiplication
+          </h3>
+          <div class="goal-progress">
+            <div class="goal-fill" style="width: 65%"></div>
+          </div>
+          <div class="goal-info">
+            <span>65% Complete</span>
+            <span>13/20 lessons</span>
+          </div>
+        </div>
+        
+        <!-- Goal 2 -->
+        <div class="goal-card">
+          <h3 class="goal-title">
+            <i class="fas fa-flask"></i> Science Project
+          </h3>
+          <div class="goal-progress">
+            <div class="goal-fill" style="width: 30%"></div>
+          </div>
+          <div class="goal-info">
+            <span>30% Complete</span>
+            <span>3/10 experiments</span>
+          </div>
+        </div>
+        
+        <!-- Goal 3 -->
+        <div class="goal-card">
+          <h3 class="goal-title">
+            <i class="fas fa-book"></i> Read 20 Books
+          </h3>
+          <div class="goal-progress">
+            <div class="goal-fill" style="width: 75%"></div>
+          </div>
+          <div class="goal-info">
+            <span>75% Complete</span>
+            <span>15/20 books</span>
           </div>
         </div>
       </div>
@@ -562,58 +895,51 @@
   </div>
 
   <script>
-    // Like button functionality
-    const likeButton = document.getElementById('likeButton');
-    likeButton.addEventListener('click', function() {
-      if (this.classList.contains('liked')) {
-        this.innerHTML = '<i class="fas fa-thumbs-up"></i> Like this video';
-        this.classList.remove('liked');
-      } else {
-        this.innerHTML = '<i class="fas fa-thumbs-up"></i> Liked!';
-        this.classList.add('liked');
-      }
-    });
-    
-    // Feedback form submission
-    const feedbackForm = document.getElementById('feedbackForm');
-    feedbackForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get rating value
-      const rating = document.querySelector('input[name="rating"]:checked');
-      const feedback = document.getElementById('feedback').value;
-      
-      if (!rating) {
-        alert('Please select a rating before submitting!');
-        return;
-      }
-      
-      // In a real app, this would send data to server
-      alert('Thank you for your feedback! Your input helps us create better content.');
-      feedbackForm.reset();
-      
-      // Reset stars
-      document.querySelectorAll('input[name="rating"]').forEach(star => {
-        star.checked = false;
+    // Animate progress bars on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animate avatar decorations
+      const decorations = document.querySelectorAll('.avatar-decoration');
+      decorations.forEach((dec, index) => {
+        setTimeout(() => {
+          dec.style.transform = 'translateY(-10px)';
+          setTimeout(() => {
+            dec.style.transform = 'translateY(0)';
+          }, 500);
+        }, index * 300);
       });
+      
+      // Animate progress bars
+      setTimeout(() => {
+        document.querySelectorAll('.progress-fill').forEach(fill => {
+          const width = fill.style.width;
+          fill.style.width = '0';
+          setTimeout(() => {
+            fill.style.width = width;
+          }, 200);
+        });
+      }, 500);
+      
+      // Animate goal progress bars
+      setTimeout(() => {
+        document.querySelectorAll('.goal-fill').forEach(fill => {
+          const width = fill.style.width;
+          fill.style.width = '0';
+          setTimeout(() => {
+            fill.style.width = width;
+          }, 200);
+        });
+      }, 700);
     });
     
-    // Hover effect for video cards
-    const videoCards = document.querySelectorAll('.video-card');
-    videoCards.forEach(card => {
-      card.addEventListener('mouseenter', function() {
+    // Add hover effect to badges
+    const badgeCards = document.querySelectorAll('.badge-card');
+    badgeCards.forEach(badge => {
+      badge.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-10px)';
       });
       
-      card.addEventListener('mouseleave', function() {
+      badge.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0)';
-      });
-      
-      // Click to navigate to video
-      card.addEventListener('click', function() {
-        const videoTitle = this.querySelector('.video-card-title').textContent;
-        alert(`Playing video: ${videoTitle}`);
-        // In a real app, this would navigate to the video
       });
     });
   </script>
