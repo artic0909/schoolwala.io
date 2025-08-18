@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/about-us.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div
+        class="container"
+        style="display: flex; justify-content: space-between"
+      >
+        <a class="brand" href="index.html">
+          <div class="logo">
+            <img src="./img/logo.png" class="img-fluid" width="54px" alt="SW" />
+          </div>
+          <div>
+            <div class="brand-name">Schoolwala</div>
+            <small>Fun tuition for curious kids</small>
+          </div>
+        </a>
+
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="school-tuitions.html">School Tuitions</a></li>
+            <li><a href="my-class.html">My Class</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <!-- <li>
+              <a
+                href="student-profile.html"
+                style="
+                  max-width: fit-content;
+                  max-height: fit-content;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  align-items: center;
+                "
+                ><p
+                  class="btn-outline"
+                  style="
+                    background: url(./img/profile.png);
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 50%;
+                    background-size: cover;
+                    background-position: center;
+                    margin: 0;
+                    padding: 0;
+                  "
+                ></p
+              ></a>
+            </li> -->
+            <li><a class="btn-outline" href="login.html">Login/Reg</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ABOUT US-->
+    <div class="container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <span>/</span>
+        <span class="current"><i class="fas fa-info-circle"></i> About Us</span>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero-about">
+        <div class="about-element elem-1"></div>
+        <div class="about-element elem-2"></div>
+        <div class="about-element elem-3"></div>
+        <div class="about-element elem-4"></div>
+
+        <h1 class="hero-title">
+          Where Learning Becomes <span>an Adventure!</span>
+        </h1>
+        <p class="hero-subtitle">
+          At Schoolwala, we believe every child deserves a magical learning
+          journey. Our mission is to transform education into an exciting quest
+          filled with discovery and joy.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-circle">
+            <div class="stat-number">50,000+</div>
+            <div class="stat-label">Happy Kids</div>
+          </div>
+          <div class="stat-circle">
+            <div class="stat-number">1,200+</div>
+            <div class="stat-label">Fun Lessons</div>
+          </div>
+          <div class="stat-circle">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Section -->
+      <div class="story-section">
+        <div class="story-container">
+          <h2 class="section-title">Our Story</h2>
+          <div class="story-content">
+            <p>
+              Once upon a time in 2018, a group of teachers and tech wizards
+              noticed something troubling - kids were losing their spark for
+              learning. Textbooks felt dull, classrooms seemed boring, and
+              curiosity was fading. We knew something had to change!
+            </p>
+
+            <p>
+              That's when Schoolwala was born - a magical place where numbers
+              dance, words tell stories, and science experiments feel like
+              wizardry. We set out to create a learning wonderland where every
+              child could explore at their own pace, guided by friendly mentors
+              and playful characters.
+            </p>
+
+            <div class="founder-quote">
+              "Our dream was simple: make learning so fun that kids would forget
+              they're studying. We wanted to see that magical 'aha!' moment
+              every day!"
+            </div>
+
+            <p>
+              Today, Schoolwala has become a vibrant community of curious
+              explorers. From our first animated math video to our latest
+              augmented reality history lessons, we've stayed true to our
+              mission: turning 'I have to learn' into 'I get to discover!'
+            </p>
+
+            <p>
+              Every day, we're inspired by the amazing kids who remind us that
+              learning isn't about memorizing facts - it's about exploring the
+              wonderful world around us with wide-eyed wonder.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Section -->
+      <div class="team-section">
+        <div class="team-header">
+          <h2 class="section-title">Meet Our Wizard Team</h2>
+          <p>The magical minds making learning fun</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Team Member 1 -->
+          <div class="team-member">
+            <div class="member-avatar">
+              <i class="fas fa-hat-wizard"></i>
+            </div>
+            <h3 class="member-name">Raj Mehta</h3>
+            <div class="member-role">Chief Learning Wizard</div>
+            <p class="member-bio">
+              Former teacher with 15 years of experience. Believes every math
+              problem is a puzzle waiting to be solved!
+            </p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-member">
+            <div class="member-avatar">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3 class="member-name">Priya Sharma</h3>
+            <div class="member-role">Science Sorceress</div>
+            <p class="member-bio">
+              Turns complex science concepts into magical experiments. Her
+              potions always produce 'wow' moments!
+            </p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-member">
+            <div class="member-avatar">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="member-name">Arjun Patel</h3>
+            <div class="member-role">Creative Artificer</div>
+            <p class="member-bio">
+              Brings lessons to life with colorful animations. His doodles have
+              a magical way of explaining tough topics!
+            </p>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="team-member">
+            <div class="member-avatar">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3 class="member-name">Maya Verma</h3>
+            <div class="member-role">Game Enchantress</div>
+            <p class="member-bio">
+              Creates learning games so fun, kids forget they're educational.
+              Her quests make knowledge an adventure!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Values Section -->
+      <div class="values-section">
+        <div class="team-header">
+          <h2 class="section-title">Our Magical Principles</h2>
+          <p>The spells that guide everything we do</p>
+        </div>
+
+        <div class="values-grid">
+          <!-- Value 1 -->
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="value-title">Playful Learning</h3>
+            <p class="value-description">
+              We believe the best learning happens when kids are having fun.
+              Games, stories, and adventures make knowledge stick!
+            </p>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="value-title">Curiosity First</h3>
+            <p class="value-description">
+              We nurture natural curiosity instead of forcing memorization.
+              Questions are always more important than answers!
+            </p>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <h3 class="value-title">Kid-Centered</h3>
+            <p class="value-description">
+              Our young learners guide everything we create. We listen, adapt,
+              and design with their needs in mind.
+            </p>
+          </div>
+
+          <!-- Value 4 -->
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3 class="value-title">Growth Mindset</h3>
+            <p class="value-description">
+              Mistakes are magical learning opportunities! We celebrate effort
+              and progress over perfection.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2 class="cta-title">Ready for a Learning Adventure?</h2>
+        <p class="cta-subtitle">
+          Join thousands of curious kids exploring our magical learning world.
+          Where education meets excitement!
+        </p>
+        <a href="#" class="btn-cta">
+          <i class="fas fa-hat-wizard"></i> Start Free Trial
+        </a>
+      </div>
+    </div>
+
+    <!-- APP PROMOTION -->
+    <section class="app-section">
+      <div
+        class="container app-flex"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div class="app-content">
+          <h2>Learning At Your Pace<br />Anytime, Anywhere</h2>
+          <p>Download the SchoolWala App - India's Popular Learning Platform</p>
+          <a href="#" target="_blank">
+            <img
+              src="./img/play.png"
+              alt="Get it on Google Play"
+              class="play-btn2"
+              style="border-radius: 5px"
+            />
+          </a>
+        </div>
+
+        <div class="app-images">
+          <img
+            src="./img/mobile-ad-strip.png"
+            alt="App Screenshot"
+            class="phone phone-front"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img
+                src="./img/logo.png"
+                class="img-fluid"
+                width="54px"
+                alt="SW"
+              />
+            </div>
+            <div>
+              <div class="brand-name">Schoolwala</div>
+              <div class="tagline">Making learning delightful</div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="my-class.html">My Class</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 Schoolwala. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#" style="width: fit-content"
+              ><img
+                src="./img/facebook.png"
+                class="img-fluid"
+                width="40"
+                alt=""
+            /></a>
+            <a href="#" style="width: fit-content"
+              ><img
+                src="./img/instagram.png"
+                class="img-fluid"
+                width="40"
+                alt=""
+            /></a>
+            <a href="#" style="width: fit-content"
+              ><img src="./img/social.png" class="img-fluid" width="40" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- STICKY CTA -->
+    <div class="sticky-cta">
+      <div class="container">
+        <div class="sticky-content">
+          <p>Learning made fun for curious minds! 🚀</p>
+          <a class="btn-primary" href="#">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animate stat circles
+        const statCircles = document.querySelectorAll(".stat-circle");
+        statCircles.forEach((circle, index) => {
+          setTimeout(() => {
+            circle.style.transform = "scale(1.1) rotate(5deg)";
+            setTimeout(() => {
+              circle.style.transform = "";
+            }, 500);
+          }, index * 300);
+        });
+
+        // Add hover effect to team members
+        const teamMembers = document.querySelectorAll(".team-member");
+        teamMembers.forEach((member) => {
+          member.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px)";
+          });
+
+          member.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

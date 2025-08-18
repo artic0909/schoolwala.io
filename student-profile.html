@@ -43,7 +43,32 @@
             <li><a href="school-tuitions.html">School Tuitions</a></li>
             <li><a href="my-class.html">My Class</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a class="btn-outline" href="login.html">Login/Reg</a></li>
+            <li>
+              <a
+                href="student-profile.html"
+                style="
+                  max-width: fit-content;
+                  max-height: fit-content;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  align-items: center;
+                "
+                ><p
+                  class="btn-outline"
+                  style="
+                    background: url(./img/profile.png);
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 50%;
+                    background-size: cover;
+                    background-position: center;
+                    margin: 0;
+                    padding: 0;
+                  "
+                ></p
+              ></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -53,16 +78,36 @@
     <div class="container">
       <!-- Breadcrumb -->
       <div class="breadcrumb">
-        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <span><a href="#" class="current"><i class="fas fa-user"></i>&nbsp;My Profile</a></span>
         <span>/</span>
-        <span class="current"><i class="fas fa-user"></i> My Profile</span>
+        <span class="" style="text-decoration: underline"
+          ><a href="student-profile-edit.html"
+            ><i class="fas fa-edit"></i>&nbsp;Update Profile</a
+          ></span
+        >
+        <span>/</span>
+        <span class="btn-outline"
+          ><a href=""
+            ><i class="fas fa-power-off"></i>&nbsp;Logout</a
+          ></span
+        >
       </div>
 
       <!-- Profile Header -->
       <div class="profile-header">
         <div class="avatar-container">
           <div class="avatar">
-            <div class="profile-img" style="background: url('./img/profile.png'); height: 120px; width: 120px; border-radius: 50%; background-size: cover; background-position: center"></div>
+            <div
+              class="profile-img"
+              style="
+                background: url('./img/profile.png');
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
           </div>
           <div class="avatar-decoration decoration-1">
             <i class="fas fa-star"></i>
@@ -120,7 +165,6 @@
       <div class="section">
         <div class="section-header">
           <h2 class="section-title">My Achievements</h2>
-
         </div>
 
         <div class="badges-container">
@@ -166,7 +210,6 @@
       <div class="section">
         <div class="section-header">
           <h2 class="section-title">Learning Progress</h2>
-
         </div>
 
         <div class="progress-grid">
@@ -239,7 +282,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- APP PROMOTION -->
@@ -295,19 +337,33 @@
           </div>
 
           <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="my-class.html">My Class</a>
           </div>
         </div>
 
         <div class="footer-bottom">
           <p>&copy; 2023 Schoolwala. All rights reserved.</p>
           <div class="social-links">
-            <a href="#">FB</a>
-            <a href="#">IG</a>
-            <a href="#">YT</a>
+            <a href="#" style="width: fit-content"
+              ><img
+                src="./img/facebook.png"
+                class="img-fluid"
+                width="40"
+                alt=""
+            /></a>
+            <a href="#" style="width: fit-content"
+              ><img
+                src="./img/instagram.png"
+                class="img-fluid"
+                width="40"
+                alt=""
+            /></a>
+            <a href="#" style="width: fit-content"
+              ><img src="./img/social.png" class="img-fluid" width="40" alt=""
+            /></a>
           </div>
         </div>
       </div>
