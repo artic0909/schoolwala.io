@@ -207,7 +207,7 @@
               <span class="menu-header-text">Course</span>
             </li>
             <!-- Cards -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="admin-classes.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Classes">Classes</div>
@@ -242,7 +242,7 @@
               </a>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="admin-video-feedbacks.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-like"></i>
                 <div data-i18n="Video Feedbacks">Video Feedbacks</div>
@@ -399,10 +399,11 @@
                       <div class="col-sm-7">
                         <div class="card-body">
                           <h5 class="card-title text-primary">
-                            List of Classes !
+                            List of Video Feedbacks !
                           </h5>
                           <p class="mb-4">
-                            You can <strong>add/ edit/ delete</strong> classes
+                            You can <strong>add/ edit/ delete</strong> video
+                            feedback
                           </p>
                         </div>
                       </div>
@@ -423,8 +424,9 @@
                             <thead>
                               <tr>
                                 <th>SL</th>
-                                <th>Class Name</th>
-                                <th>Description</th>
+                                <th>Video Details</th>
+                                <th>Student Details</th>
+                                <th>Feedbacks</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -433,18 +435,37 @@
                                 <td>
                                   <strong>1</strong>
                                 </td>
-                                <td>Class 5</td>
+                                <td>
+                                  <p class="m-0 p-0">Class 8</p>
+                                  <p class="m-0 p-0">Subject 1</p>
+                                  <p class="m-0 p-0">Chapter 1</p>
+                                  <p class="m-0 p-0">Video Title</p>
+                                </td>
+                                <td>
+                                  <p class="m-0 p-0">
+                                    <strong>Name:</strong> Xyz
+                                  </p>
+                                  <p class="m-0 p-0">
+                                    <strong>Email:</strong> xyz@gmail.com
+                                  </p>
+                                  <p class="m-0 p-0">
+                                    <strong>Mobile:</strong> +91 1234567890
+                                  </p>
+                                  <p class="m-0 p-0">
+                                    <strong>STU ID:</strong> 25-SW-CLASS8-01
+                                  </p>
+                                </td>
                                 <td>
                                   <button
-                                    class="btn btn-primary"
                                     type="button"
                                     class="btn btn-primary"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#backDropModalDesc"
+                                    data-bs-target="#backDropModalFeedback"
                                   >
-                                    Description
+                                    Feedback
                                   </button>
                                 </td>
+
                                 <td>
                                   <button
                                     type="button"
@@ -476,10 +497,10 @@
             </div>
             <!-- / Content -->
 
-            <!-- Desc Modal -->
+            <!-- Feedback Modal -->
             <div
               class="modal fade"
-              id="backDropModalDesc"
+              id="backDropModalFeedback"
               data-bs-backdrop="static"
               tabindex="-1"
             >
@@ -487,7 +508,7 @@
                 <form class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="backDropModalTitle">
-                      Class 5 Description
+                      Student Feedback
                     </h5>
                     <button
                       type="button"
@@ -499,11 +520,21 @@
                   <div class="modal-body">
                     <div class="row">
                       <div class="col mb-3">
+                        <p class="fw-bold">
+                          STU ID | Student Name | Video Title
+                        </p>
+                        <p class="fw-bold m-0 p-0">Video Title:</p>
+                        <span
+                          >Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit.</span
+                        >
+                        <p class="fw-bold m-0 p-0 mt-2 text-danger">
+                          Rating: 4/5
+                        </p>
+                        <p class="fw-bold m-0 p-0 mt-2">Feedback:</p>
                         <p>
-                          <strong>Description:</strong>
-                          <br />
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quisquam, quae?
+                          elit.
                         </p>
                       </div>
                     </div>
@@ -521,18 +552,18 @@
               </div>
             </div>
 
-            <!-- Add Class Modal -->
+            <!-- Add Video Feedback Modal -->
             <div
               class="modal fade"
               id="backDropModalAddClass"
               data-bs-backdrop="static"
               tabindex="-1"
             >
-              <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-dialog modal-dialog-centered modal-xl">
                 <form class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="backDropModalTitle">
-                      Add Class
+                      Add Video Feedback
                     </h5>
                     <button
                       type="button"
@@ -545,24 +576,121 @@
                     <div class="row">
                       <div class="col mb-3">
                         <label for="nameBackdrop" class="form-label"
-                          >Class Name</label
+                          >Choose Class</label
                         >
-                        <input
-                          type="text"
-                          id="nameBackdrop"
-                          class="form-control"
-                          placeholder="Ex:- Class 5"
-                        />
+                        <select name="" id="" class="form-select">
+                          <option value="1">Class 1</option>
+                          <option value="2">Class 2</option>
+                          <option value="3">Class 3</option>
+                          <option value="4">Class 4</option>
+                          <option value="5">Class 5</option>
+                        </select>
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Subject</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="1">Subject 1</option>
+                          <option value="2">Subject 2</option>
+                          <option value="3">Subject 3</option>
+                          <option value="4">Subject 4</option>
+                          <option value="5">Subject 5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Chapter</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="1">Chapter 1</option>
+                          <option value="2">Chapter 2</option>
+                          <option value="3">Chapter 3</option>
+                          <option value="4">Chapter 4</option>
+                          <option value="5">Chapter 5</option>
+                        </select>
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Video Type</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="paid">Paid</option>
+                          <option value="free">Free</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Video Title</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="1">Title 1</option>
+                          <option value="2">Title 2</option>
+                          <option value="3">Title 3</option>
+                          <option value="4">Title 4</option>
+                          <option value="5">Title 5</option>
+                        </select>
                       </div>
                     </div>
 
                     <div class="row g-2">
                       <div class="col mb-3">
                         <label for="nameBackdrop" class="form-label"
-                          >Class Description</label
+                          >Student ID</label
                         >
-                        <textarea class="form-control" name="" id="" rows="5">
-                        </textarea>
+                        <input type="text" class="form-control" />
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Student Name</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Student Email</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="row g-2">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Student Mobile</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Rating</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="row g-2">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Feedback</label
+                        >
+                        <textarea
+                          name=""
+                          id=""
+                          class="form-control"
+                          rows="5"
+                        ></textarea>
                       </div>
                     </div>
                   </div>
@@ -580,18 +708,18 @@
               </div>
             </div>
 
-            <!-- Edit Class Modal -->
+            <!-- Edit Video Feedback Modal -->
             <div
               class="modal fade"
               id="backDropModalEditClass"
               data-bs-backdrop="static"
               tabindex="-1"
             >
-              <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-dialog modal-dialog-centered modal-xl">
                 <form class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="backDropModalTitle">
-                      Edit Class
+                      Edit Video Feedback
                     </h5>
                     <button
                       type="button"
@@ -604,24 +732,121 @@
                     <div class="row">
                       <div class="col mb-3">
                         <label for="nameBackdrop" class="form-label"
-                          >Class Name</label
+                          >Choose Class</label
                         >
-                        <input
-                          type="text"
-                          id="nameBackdrop"
-                          class="form-control"
-                          placeholder="Ex:- Class 5"
-                        />
+                        <select name="" id="" class="form-select">
+                          <option value="1">Class 1</option>
+                          <option value="2">Class 2</option>
+                          <option value="3">Class 3</option>
+                          <option value="4">Class 4</option>
+                          <option value="5">Class 5</option>
+                        </select>
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Subject</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="1">Subject 1</option>
+                          <option value="2">Subject 2</option>
+                          <option value="3">Subject 3</option>
+                          <option value="4">Subject 4</option>
+                          <option value="5">Subject 5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Chapter</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="1">Chapter 1</option>
+                          <option value="2">Chapter 2</option>
+                          <option value="3">Chapter 3</option>
+                          <option value="4">Chapter 4</option>
+                          <option value="5">Chapter 5</option>
+                        </select>
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Video Type</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="paid">Paid</option>
+                          <option value="free">Free</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Video Title</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="1">Title 1</option>
+                          <option value="2">Title 2</option>
+                          <option value="3">Title 3</option>
+                          <option value="4">Title 4</option>
+                          <option value="5">Title 5</option>
+                        </select>
                       </div>
                     </div>
 
                     <div class="row g-2">
                       <div class="col mb-3">
                         <label for="nameBackdrop" class="form-label"
-                          >Class Description</label
+                          >Student ID</label
                         >
-                        <textarea class="form-control" name="" id="" rows="5">
-                        </textarea>
+                        <input type="text" class="form-control" />
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Student Name</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Student Email</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="row g-2">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Student Mobile</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Rating</label
+                        >
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="row g-2">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Feedback</label
+                        >
+                        <textarea
+                          name=""
+                          id=""
+                          class="form-control"
+                          rows="5"
+                        ></textarea>
                       </div>
                     </div>
                   </div>
@@ -639,7 +864,7 @@
               </div>
             </div>
 
-            <!-- Delete Class Modal -->
+            <!-- Delete Video Feedback Modal -->
             <div
               class="modal fade"
               id="backDropModalDeleteClass"
@@ -650,7 +875,7 @@
                 <form class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="backDropModalTitle">
-                      Delete Class
+                      Delete Video Feedback
                     </h5>
                     <button
                       type="button"
@@ -662,7 +887,7 @@
                   <div class="modal-body">
                     <div class="row">
                       <div class="col mb-3">
-                        <p>Are you sure you want to delete this class?</p>
+                        <p>Are you sure you want to delete this video feedback?</p>
                       </div>
                     </div>
                   </div>
