@@ -15,7 +15,7 @@
     />
 
     <title>
-      Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro
+      Account settings - Account | Sneat - Bootstrap 5 HTML Admin Template - Pro
     </title>
 
     <meta name="description" content="" />
@@ -55,11 +55,6 @@
     <link
       rel="stylesheet"
       href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/libs/apex-charts/apex-charts.css"
     />
 
     <!-- Page CSS -->
@@ -106,7 +101,7 @@
           <!-- Sidebar -->
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="admin-dashboard.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Dashboard">Dashboard</div>
@@ -228,7 +223,6 @@
                     <div data-i18n="All Students">All Students</div>
                   </a>
                 </li>
-
                 <li class="menu-item">
                   <a href="admin-tuition-fees.html" class="menu-link">
                     <div data-i18n="Tuition Fees">Tuition Fees</div>
@@ -361,29 +355,130 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4">Account Settings</h4>
+
               <div class="row">
-                <div class="col-lg-12 mb-4 order-0">
+                <div class="col-md-12">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Profile Details</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+                      <div
+                        class="d-flex align-items-start align-items-sm-center gap-4"
+                      >
+                        <img
+                          src="./assets/img/avatars/1.png"
+                          alt="user-avatar"
+                          class="d-block rounded"
+                          height="100"
+                          width="100"
+                          id="uploadedAvatar"
+                        />
+                      </div>
+                    </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                      <form
+                        id="formAccountSettings"
+                        method="POST"
+                        onsubmit="return false"
+                      >
+                        <div class="row">
+                          <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label"
+                              >Admin Name</label
+                            >
+                            <input
+                              class="form-control"
+                              type="text"
+                              value="Saklin"
+                              
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label"
+                              >Admin Email Address</label
+                            >
+                            <input
+                              class="form-control"
+                              type="text"
+                              value="saklin@example.com"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="email" class="form-label"
+                              >Admin Password</label
+                            >
+                            <input
+                              class="form-control"
+                              type="text"
+                              value="Password"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label"
+                              >Admin Confirm Password</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="Password"
+                            />
+                          </div>
+                        </div>
+                        <div class="mt-2">
+                          <button type="submit" class="btn btn-primary me-2">
+                            Save changes
+                          </button>
+                          <button
+                            type="reset"
+                            class="btn btn-outline-secondary"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- /Account -->
+                  </div>
                   <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">
-                            Welcome Back Saklin! 🎉
-                          </h5>
-                          <p class="mb-4">It's your space in the world.</p>
+                    <h5 class="card-header">Delete Account</h5>
+                    <div class="card-body">
+                      <div class="mb-3 col-12 mb-0">
+                        <div class="alert alert-warning">
+                          <h6 class="alert-heading fw-bold mb-1">
+                            Are you sure you want to delete your account?
+                          </h6>
+                          <p class="mb-0">
+                            Once you delete your account, there is no going
+                            back. Please be certain.
+                          </p>
                         </div>
                       </div>
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="./assets/img/illustrations/man-with-laptop-light.png"
-                            height="140"
-                            alt="View Badge User"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
+                      <form
+                        id="formAccountDeactivation"
+                        onsubmit="return false"
+                      >
+                        <div class="form-check mb-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="accountActivation"
+                            id="accountActivation"
                           />
+                          <label
+                            class="form-check-label"
+                            for="accountActivation"
+                            >I confirm my account deactivation</label
+                          >
                         </div>
-                      </div>
+                        <button
+                          type="submit"
+                          class="btn btn-danger deactivate-account"
+                        >
+                          Deactivate Account
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -436,13 +531,12 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="./assets/js/dashboards-analytics.js"></script>
+    <script src="./assets/js/pages-account-settings-account.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
