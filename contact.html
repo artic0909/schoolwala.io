@@ -15,6 +15,113 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/about-us.css" />
     <link rel="stylesheet" href="./css/contact.css" />
+    <style>
+      /* Result Popup */
+      .result-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .result-popup.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .result-content {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 40px;
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+        transform: translateY(20px);
+        transition: transform 0.5s ease;
+        position: relative;
+      }
+
+      .result-popup.active .result-content {
+        transform: translateY(0);
+      }
+
+      .result-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, var(--mint), var(--sky));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 3rem;
+        color: var(--white);
+      }
+
+      .result-title {
+        font-family: "Baloo 2", cursive;
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: var(--text);
+      }
+
+      .result-score {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--accent);
+        margin: 20px 0;
+        line-height: 1;
+      }
+
+      .result-message {
+        color: var(--text-light);
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+      }
+
+      .result-actions {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .btn-result {
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-review {
+        background: var(--white);
+        color: var(--accent);
+        border: 2px solid var(--accent);
+      }
+
+      .btn-review:hover {
+        background: rgba(255, 138, 0, 0.1);
+      }
+
+      .btn-next {
+        background: var(--accent);
+        color: var(--white);
+        border: 2px solid var(--accent);
+      }
+
+      .btn-next:hover {
+        background: var(--accent-dark);
+      }
+    </style>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -196,24 +303,138 @@
                   <p>hello@schoolwala.com<br />help@schoolwala.com</p>
                 </div>
               </div>
+
+              <div class="detail-item">
+                <div class="detail-content" style="width: 100%">
+                  <button class="btn-submit" id="submitTest">
+                    <i class="fas fa-user"></i>&nbsp;Waver Request
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <div class="social-links">
-              <a href="#" class="social-link">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-youtube"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-whatsapp"></i>
-              </a>
+            <!-- Modal -->
+            <div class="result-popup" id="resultPopup">
+              <div class="result-content">
+                <h2 class="result-title">Waver Request Form</h2>
+                <form action="">
+                  <div
+                    class="d-flex"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      gap: 5px;
+                    "
+                  >
+                    <div class="form-group">
+                      <label class="form-label" for="name">
+                        <i class="fas fa-user"></i> Parent's Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Enter Parent's Name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="name">
+                        <i class="fas fa-user"></i> Child's Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Enter Child's Name"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      gap: 5px;
+                    "
+                  >
+                    <div class="form-group">
+                      <label class="form-label" for="name">
+                        <i class="fas fa-calendar"></i> Child's Age
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Age"
+                      />
+                    </div>
+
+                    <div class="form-group" style="width: 100%">
+                      <label class="form-label" for="name">
+                        <i class="fas fa-table"></i> Choose Class
+                      </label>
+                      <select name="" id="" class="form-control">
+                        <option value="3">Class 3</option>
+                        <option value="4">Class 4</option>
+                        <option value="5">Class 5</option>
+                        <option value="6">Class 6</option>
+                        <option value="7">Class 7</option>
+                        <option value="8">Class 8</option>
+                        <option value="9">Class 9</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      gap: 5px;
+                    "
+                  >
+                    <div class="form-group">
+                      <label class="form-label" for="name">
+                        <i class="fas fa-envelope"></i> Email
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="name">
+                        <i class="fas fa-phone"></i> Mobile
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Mobile"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="form-label" for="name">
+                        <i class="fas fa-location-arrow"></i> Address
+                      </label>
+                      <textarea name="" id="" class="form-control"></textarea>
+                    </div>
+
+                  <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Send Request
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -370,5 +591,75 @@
     </div>
 
     <script src="./js/script.js"></script>
+
+    <script>
+      // Initialize variables
+      const totalQuestions = 5;
+      let answeredQuestions = 0;
+
+      // Update progress bar
+      function updateProgress() {
+        const percentage = Math.round(
+          (answeredQuestions / totalQuestions) * 100
+        );
+        document.querySelector(
+          ".progress-percent"
+        ).textContent = `${percentage}%`;
+        document.getElementById("progressFill").style.width = `${percentage}%`;
+      }
+
+      // Option selection
+      const options = document.querySelectorAll(".option");
+      options.forEach((option) => {
+        option.addEventListener("click", function () {
+          const questionNum = this.dataset.question;
+          const allQuestionOptions = document.querySelectorAll(
+            `.option[data-question="${questionNum}"]`
+          );
+
+          // Remove selected class from all options in this question
+          allQuestionOptions.forEach((opt) => {
+            opt.classList.remove("selected");
+          });
+
+          // Add selected class to clicked option
+          this.classList.add("selected");
+
+          // Check if this is the first time answering this question
+          const wasAnswered = Array.from(allQuestionOptions).some((opt) =>
+            opt.classList.contains("selected")
+          );
+          if (!wasAnswered) {
+            answeredQuestions++;
+            updateProgress();
+          }
+        });
+      });
+
+      // Submit test
+      document
+        .getElementById("submitTest")
+        .addEventListener("click", function () {
+          const selectedOptions =
+            document.querySelectorAll(".option.selected").length;
+
+          // Show result popup
+          document.getElementById("resultPopup").classList.add("active");
+        });
+
+      // Close popup if clicked outside
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("result-popup")) {
+          document.getElementById("resultPopup").classList.remove("active");
+        }
+      });
+
+      // Initialize progress bar
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+          document.getElementById("progressFill").style.width = "20%";
+        }, 300);
+      });
+    </script>
   </body>
 </html>
