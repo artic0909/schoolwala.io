@@ -14,9 +14,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>
-      Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro
-    </title>
+    <title>SEO - School Tuition</title>
 
     <meta name="description" content="" />
 
@@ -72,39 +70,26 @@
     <script src="./assets/js/config.js"></script>
 
     <style>
-      .fab {
-        position: fixed;
-        right: 34px;
-        bottom: 54px;
-        width: 56px;
-        height: 56px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 9999px;
-        background: #0d6efd; /* change color as you like */
-        color: #fff !important;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
-          0 6px 10px rgba(0, 0, 0, 0.08);
-        text-decoration: none;
-        z-index: 1050; /* sits above most UI */
-        transition: transform 0.15s ease, box-shadow 0.15s ease,
-          filter 0.15s ease;
+      .google-preview {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        background: #fff;
+        max-width: 600px;
       }
-      .fab:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18),
-          0 8px 14px rgba(0, 0, 0, 0.1);
-        filter: brightness(1.05);
+      .google-title {
+        color: #1a0dab;
+        font-size: 18px;
+        margin-bottom: 3px;
       }
-      .fab:focus-visible {
-        outline: 3px solid rgba(13, 110, 253, 0.45);
-        outline-offset: 2px;
+      .google-url {
+        color: #006621;
+        font-size: 14px;
+        margin-bottom: 3px;
       }
-      @media (prefers-reduced-motion: reduce) {
-        .fab {
-          transition: none;
-        }
+      .google-description {
+        color: #545454;
+        font-size: 14px;
       }
     </style>
   </head>
@@ -154,42 +139,42 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">SEO</span>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
                 <div data-i18n="Page SEO">Page SEO</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="admin-home-page.html" class="menu-link">
+                  <a href="admin-seo-home-page.html" class="menu-link">
                     <div data-i18n="Home Page">Home Page</div>
                   </a>
                 </li>
-                <li class="menu-item">
-                  <a href="admin-school-tuition.html" class="menu-link">
+                <li class="menu-item active">
+                  <a href="admin-seo-school-tuition.html" class="menu-link">
                     <div data-i18n="School Tuition">School Tuition</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="admin-my-class.html" class="menu-link">
+                  <a href="admin-seo-my-class.html" class="menu-link">
                     <div data-i18n="My Class">My Class</div>
                   </a>
                 </li>
 
                 <li class="menu-item">
-                  <a href="admin-contact.html" class="menu-link">
+                  <a href="admin-seo-contact.html" class="menu-link">
                     <div data-i18n="Contact">Contact</div>
                   </a>
                 </li>
 
                 <li class="menu-item">
-                  <a href="admin-aboutus.html" class="menu-link">
+                  <a href="admin-seo-aboutus.html" class="menu-link">
                     <div data-i18n="About US">About US</div>
                   </a>
                 </li>
 
                 <li class="menu-item">
-                  <a href="admin-privacy-policy.html" class="menu-link">
+                  <a href="admin-seo-privacy-policy.html" class="menu-link">
                     <div data-i18n="Privacy Policy">Privacy Policy</div>
                   </a>
                 </li>
@@ -438,12 +423,8 @@
                       <div class="col-sm-7">
                         <div class="card-body">
                           <h5 class="card-title text-primary">
-                            List of Waver Student Profiles !
+                            SEO - School Tuition
                           </h5>
-                          <p class="mb-4">
-                            You can <strong>see/ edit/ delete</strong> waver
-                            student profiles
-                          </p>
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
@@ -458,102 +439,145 @@
                         </div>
                       </div>
 
-                      <!-- Student Search Filter -->
-                      <div class="col-lg-12 mb-4">
-                        <form action="">
-                          <div class="input-group">
-                            <label for="" class="input-group-text">
-                              Choose Class</label
-                            >
-                            <select name="" class="form-select" id="">
-                              <option value="1">Class 1</option>
-                              <option value="2">Class 2</option>
-                              <option value="3">Class 3</option>
-                              <option value="4">Class 4</option>
-                              <option value="5">Class 5</option>
-                            </select>
-
-                            <button class="btn btn-primary">Search</button>
-                            &nbsp;&nbsp;
-                            <button class="btn btn-info">Export</button>
-                          </div>
-                        </form>
-                      </div>
-
                       <div class="col-lg-12">
-                        <div class="table-responsive text-nowrap">
-                          <table class="table table-hover table-bordered">
-                            <thead>
-                              <tr>
-                                <th>SL</th>
-                                <th>Profile</th>
-                                <th>STU ID</th>
-                                <th>STU Type</th>
-                                <th>Student Name</th>
-                                <th>Student Age</th>
-                                <th>Class Name</th>
-                                <th>Parent's Name</th>
-                                <th>Email/ Mobile</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0">
-                              <tr>
-                                <td>
-                                  <strong>1</strong>
-                                </td>
-                                <td>
-                                  <img
-                                    src="./assets/img/avatars/1.png"
-                                    class="w-px-40 h-auto rounded-circle"
-                                  />
-                                </td>
-                                <td>
-                                  <span class="badge bg-label-danger"
-                                    >25-SW-CLASS8-01</span
-                                  >
-                                </td>
-                                <td>Waver</td>
-                                <td>Xyz Mnp</td>
-                                <td>
-                                  <span class="badge bg-label-primary"
-                                    >Age: 8</span
-                                  >
-                                </td>
-                                <td>
-                                  <span class="badge bg-label-warning"
-                                    >Class 8</span
-                                  >
-                                </td>
-                                <td>MNP</td>
-                                <td>
-                                  <p class="m-0 p-0">xyz@gmail.com</p>
-                                  <p class="m-0 p-0">+91 123456789</p>
-                                </td>
+                        <div class="container">
+                          <form
+                            action="/save-seo-home"
+                            method="POST"
+                            enctype="multipart/form-data"
+                            class="p-3"
+                          >
+                            <!-- Meta SEO -->
+                            <div class="mb-3">
+                              <label class="form-label">Meta Title</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="seo_title"
+                                name="seo_title"
+                                maxlength="60"
+                                placeholder="Enter meta title (50–60 chars)"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Meta Description</label>
+                              <textarea
+                                class="form-control"
+                                id="seo_description"
+                                name="seo_description"
+                                maxlength="160"
+                                rows="2"
+                                placeholder="Enter meta description (150–160 chars)"
+                              ></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Meta Keywords</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="seo_keywords"
+                                placeholder="keyword1, keyword2, keyword3"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Canonical URL</label>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="canonical_url"
+                                name="canonical_url"
+                                placeholder="https://www.yoursite.com/"
+                              />
+                            </div>
 
-                                <td>
-                                  <div class="row g-2">
-                                    <button
-                                      type="button"
-                                      class="btn btn-warning"
-                                      data-bs-toggle="modal"
-                                      data-bs-target="#backDropModalEditClass"
-                                    >
-                                      Edit
-                                    </button>
-                                    <button
-                                      class="btn btn-danger"
-                                      type="button"
-                                      data-bs-toggle="modal"
-                                      data-bs-target="#backDropModalDeleteClass"
-                                    >
-                                      Delete
-                                    </button>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                            <!-- Google Search Preview -->
+                            <h5 class="mt-4 mb-3">Google Search Preview</h5>
+                            <div class="google-preview mb-4">
+                              <div class="google-title" id="preview-title">
+                                Your Meta Title will appear here
+                              </div>
+                              <div class="google-url" id="preview-url">
+                                https://www.yoursite.com/
+                              </div>
+                              <div
+                                class="google-description"
+                                id="preview-description"
+                              >
+                                Your meta description will appear here
+                              </div>
+                            </div>
+
+                            <!-- Open Graph -->
+                            <h5 class="mt-4 mb-3">
+                              Open Graph (Social Sharing)
+                            </h5>
+                            <div class="mb-3">
+                              <label class="form-label">OG Title</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="og_title"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">OG Description</label>
+                              <textarea
+                                class="form-control"
+                                name="og_description"
+                                rows="2"
+                              ></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">OG Image</label>
+                              <input
+                                type="file"
+                                class="form-control"
+                                name="og_image"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">OG URL</label>
+                              <input
+                                type="url"
+                                class="form-control"
+                                name="og_url"
+                                placeholder="https://www.yoursite.com/"
+                              />
+                            </div>
+
+                            <!-- Twitter Card -->
+                            <h5 class="mt-4 mb-3">Twitter Card</h5>
+                            <div class="mb-3">
+                              <label class="form-label">Twitter Title</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="twitter_title"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label"
+                                >Twitter Description</label
+                              >
+                              <textarea
+                                class="form-control"
+                                name="twitter_description"
+                                rows="2"
+                              ></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Twitter Image</label>
+                              <input
+                                type="file"
+                                class="form-control"
+                                name="twitter_image"
+                              />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                              Save Settings
+                            </button>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -562,173 +586,7 @@
               </div>
             </div>
             <!-- / Content -->
-
-            <!-- Edit Student Modal -->
-            <div
-              class="modal fade"
-              id="backDropModalEditClass"
-              data-bs-backdrop="static"
-              tabindex="-1"
-            >
-              <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="backDropModalTitle">
-                      Edit Student
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col mb-3">
-                        <img
-                          src="./assets/img/avatars/1.png"
-                          class="w-px-100 h-auto rounded-circle"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Profile Image</label
-                        >
-                        <input type="file" class="form-control" />
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Parent's Name</label
-                        >
-                        <input type="text" class="form-control" />
-                      </div>
-
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Student's Name</label
-                        >
-                        <input type="text" class="form-control" />
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Email ID</label
-                        >
-                        <input type="text" class="form-control" />
-                      </div>
-
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Mobile</label
-                        >
-                        <input type="text" class="form-control" />
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Student's Age</label
-                        >
-                        <input type="text" class="form-control" />
-                      </div>
-
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Choose Class</label
-                        >
-                        <select name="" id="" class="form-select">
-                          <option value="1">Class 1</option>
-                          <option value="2">Class 2</option>
-                          <option value="3">Class 3</option>
-                          <option value="4">Class 4</option>
-                          <option value="5">Class 5</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Password</label
-                        >
-                        <input type="text" class="form-control" />
-                      </div>
-
-                      <div class="col mb-3">
-                        <label for="nameBackdrop" class="form-label"
-                          >Confirm Password</label
-                        >
-                        <input type="text" class="form-control" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-            <!-- Delete Student Modal -->
-            <div
-              class="modal fade"
-              id="backDropModalDeleteClass"
-              data-bs-backdrop="static"
-              tabindex="-1"
-            >
-              <div class="modal-dialog modal-dialog-centered">
-                <form class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="backDropModalTitle">
-                      Delete Student
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col mb-3">
-                        <p>
-                          Are you sure you want to delete this student
-                          <span class="text-danger">25-SW-CLASS8-01</span>?
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
+             
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div
@@ -784,5 +642,28 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+      // Live Google Preview Update
+      const titleInput = document.getElementById("seo_title");
+      const descInput = document.getElementById("seo_description");
+      const urlInput = document.getElementById("canonical_url");
+
+      const previewTitle = document.getElementById("preview-title");
+      const previewDesc = document.getElementById("preview-description");
+      const previewUrl = document.getElementById("preview-url");
+
+      titleInput.addEventListener("input", () => {
+        previewTitle.textContent =
+          titleInput.value || "Your Meta Title will appear here";
+      });
+      descInput.addEventListener("input", () => {
+        previewDesc.textContent =
+          descInput.value || "Your meta description will appear here";
+      });
+      urlInput.addEventListener("input", () => {
+        previewUrl.textContent = urlInput.value || "https://www.yoursite.com/";
+      });
+    </script>
   </body>
 </html>

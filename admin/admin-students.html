@@ -218,7 +218,6 @@
                   </a>
                 </li>
 
-
                 <li class="menu-item">
                   <a href="admin-story-tags.html" class="menu-link">
                     <div data-i18n="Story Tags">Story Tags</div>
@@ -439,10 +438,10 @@
                       <div class="col-sm-7">
                         <div class="card-body">
                           <h5 class="card-title text-primary">
-                            List of Capters !
+                            List of Students !
                           </h5>
                           <p class="mb-4">
-                            You can <strong>add/ edit/ delete</strong> chapters
+                            You can <strong>add/ edit/ delete</strong> students
                           </p>
                         </div>
                       </div>
@@ -488,12 +487,12 @@
                                 <th>SL</th>
                                 <th>Profile</th>
                                 <th>STU ID</th>
+                                <th>STU Type</th>
                                 <th>Student Name</th>
                                 <th>Student Age</th>
                                 <th>Class Name</th>
                                 <th>Parent's Name</th>
-                                <th>Email</th>
-                                <th>Mobile</th>
+                                <th>Email/ Mobile</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -513,6 +512,7 @@
                                     >25-SW-CLASS8-01</span
                                   >
                                 </td>
+                                <td>Regular</td>
                                 <td>Xyz Mnp</td>
                                 <td>
                                   <span class="badge bg-label-primary"
@@ -525,27 +525,37 @@
                                   >
                                 </td>
                                 <td>MNP</td>
-                                <td>xyz@gmail.com</td>
-                                <td>+91-123456789</td>
+                                <td>
+                                  <p class="m-0 p-0">xyz@gmail.com</p>
+                                  <p class="m-0 p-0">+91 123456789</p>
+                                </td>
 
                                 <td>
-                                  <button
-                                    type="button"
-                                    class="btn btn-warning"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#backDropModalEditClass"
-                                  >
-                                    Edit
-                                  </button>
-                                  &nbsp;
-                                  <button
-                                    class="btn btn-danger"
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#backDropModalDeleteClass"
-                                  >
-                                    Delete
-                                  </button>
+                                  <div class="row g-2">
+                                      <button
+                                        type="button"
+                                        class="btn btn-info"
+                                      >
+                                        Add to Waver
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn btn-warning"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#backDropModalEditClass"
+                                      >
+                                        Edit
+                                      </button>
+                                      <button
+                                        class="btn btn-danger"
+                                        type="button"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#backDropModalDeleteClass"
+                                      >
+                                        Delete
+                                      </button>
+                                    
+                                  </div>
                                 </td>
                               </tr>
                             </tbody>
@@ -586,6 +596,17 @@
                           >Profile Image</label
                         >
                         <input type="file" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Student Type</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="regular">Regular</option>
+                          <option value="waver">Waver</option>
+                        </select>
                       </div>
                     </div>
                     <div class="row">
@@ -710,6 +731,19 @@
                         <input type="file" class="form-control" />
                       </div>
                     </div>
+
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label"
+                          >Choose Student Type</label
+                        >
+                        <select name="" id="" class="form-select">
+                          <option value="regular">Regular</option>
+                          <option value="waver">Waver</option>
+                        </select>
+                      </div>
+                    </div>
+
                     <div class="row">
                       <div class="col mb-3">
                         <label for="nameBackdrop" class="form-label"
