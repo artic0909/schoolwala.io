@@ -14,9 +14,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>
-      Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro
-    </title>
+    <title>SEO - Privacy Policy</title>
 
     <meta name="description" content="" />
 
@@ -72,39 +70,26 @@
     <script src="./assets/js/config.js"></script>
 
     <style>
-      .fab {
-        position: fixed;
-        right: 34px;
-        bottom: 54px;
-        width: 56px;
-        height: 56px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 9999px;
-        background: #0d6efd; /* change color as you like */
-        color: #fff !important;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
-          0 6px 10px rgba(0, 0, 0, 0.08);
-        text-decoration: none;
-        z-index: 1050; /* sits above most UI */
-        transition: transform 0.15s ease, box-shadow 0.15s ease,
-          filter 0.15s ease;
+      .google-preview {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        background: #fff;
+        max-width: 600px;
       }
-      .fab:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18),
-          0 8px 14px rgba(0, 0, 0, 0.1);
-        filter: brightness(1.05);
+      .google-title {
+        color: #1a0dab;
+        font-size: 18px;
+        margin-bottom: 3px;
       }
-      .fab:focus-visible {
-        outline: 3px solid rgba(13, 110, 253, 0.45);
-        outline-offset: 2px;
+      .google-url {
+        color: #006621;
+        font-size: 14px;
+        margin-bottom: 3px;
       }
-      @media (prefers-reduced-motion: reduce) {
-        .fab {
-          transition: none;
-        }
+      .google-description {
+        color: #545454;
+        font-size: 14px;
       }
     </style>
   </head>
@@ -154,42 +139,42 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">SEO</span>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
                 <div data-i18n="Page SEO">Page SEO</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="admin-home-page.html" class="menu-link">
+                  <a href="admin-seo-home-page.html" class="menu-link">
                     <div data-i18n="Home Page">Home Page</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="admin-school-tuition.html" class="menu-link">
+                  <a href="admin-seo-school-tuition.html" class="menu-link">
                     <div data-i18n="School Tuition">School Tuition</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="admin-my-class.html" class="menu-link">
+                  <a href="admin-seo-my-class.html" class="menu-link">
                     <div data-i18n="My Class">My Class</div>
                   </a>
                 </li>
 
                 <li class="menu-item">
-                  <a href="admin-contact.html" class="menu-link">
+                  <a href="admin-seo-contact.html" class="menu-link">
                     <div data-i18n="Contact">Contact</div>
                   </a>
                 </li>
 
                 <li class="menu-item">
-                  <a href="admin-aboutus.html" class="menu-link">
+                  <a href="admin-seo-aboutus.html" class="menu-link">
                     <div data-i18n="About US">About US</div>
                   </a>
                 </li>
 
-                <li class="menu-item">
-                  <a href="admin-privacy-policy.html" class="menu-link">
+                <li class="menu-item active">
+                  <a href="admin-seo-privacy-policy.html" class="menu-link">
                     <div data-i18n="Privacy Policy">Privacy Policy</div>
                   </a>
                 </li>
@@ -218,8 +203,6 @@
                   </a>
                 </li>
 
-
-                
                 <li class="menu-item">
                   <a href="admin-story-tags.html" class="menu-link">
                     <div data-i18n="Story Tags">Story Tags</div>
@@ -318,7 +301,7 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Enquiry</span>
             </li>
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="admin-enquiry.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-support"></i>
                 <div data-i18n="Enquiry">Enquiry</div>
@@ -440,11 +423,8 @@
                       <div class="col-sm-7">
                         <div class="card-body">
                           <h5 class="card-title text-primary">
-                            List of Enquiries !
+                            SEO - Privacy Policy
                           </h5>
-                          <p class="mb-4">
-                            You can <strong>reply/ delete</strong> enquiries
-                          </p>
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
@@ -459,91 +439,145 @@
                         </div>
                       </div>
 
-                      <!-- Student Search Filter -->
-                      <div
-                        class="col-lg-12 mb-4 d-flex px-5 justify-content-end"
-                      >
-                        <button class="btn btn-info">Export</button>
-                      </div>
-
                       <div class="col-lg-12">
-                        <div class="table-responsive text-nowrap">
-                          <table class="table table-hover table-bordered">
-                            <thead>
-                              <tr>
-                                <th>SL</th>
-                                <th>Enquiry Date</th>
-                                <th>Reply Date</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Subject</th>
-                                <th>Status</th>
-                                <th>Enquiry/ Reply</th>
-                                <th>Action</th>
-                              </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0">
-                              <tr>
-                                <td>
-                                  <strong>1</strong>
-                                </td>
+                        <div class="container">
+                          <form
+                            action="/save-seo-home"
+                            method="POST"
+                            enctype="multipart/form-data"
+                            class="p-3"
+                          >
+                            <!-- Meta SEO -->
+                            <div class="mb-3">
+                              <label class="form-label">Meta Title</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="seo_title"
+                                name="seo_title"
+                                maxlength="60"
+                                placeholder="Enter meta title (50–60 chars)"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Meta Description</label>
+                              <textarea
+                                class="form-control"
+                                id="seo_description"
+                                name="seo_description"
+                                maxlength="160"
+                                rows="2"
+                                placeholder="Enter meta description (150–160 chars)"
+                              ></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Meta Keywords</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="seo_keywords"
+                                placeholder="keyword1, keyword2, keyword3"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Canonical URL</label>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="canonical_url"
+                                name="canonical_url"
+                                placeholder="https://www.yoursite.com/"
+                              />
+                            </div>
 
-                                <td>
-                                  <span class="badge bg-label-warning"
-                                    >01-01-2025</span
-                                  >
-                                </td>
-                                <td>
-                                  <span class="badge bg-label-primary"
-                                    >01-01-2025</span
-                                  >
-                                </td>
-                                <td>Xyz Mnp</td>
-                                <td>xyz@gmail.com</td>
-                                <td>Subject 1</td>
-                                <td>
-                                  <span class="badge bg-label-danger"
-                                    >Not Replied</span
-                                  >
-                                  /
-                                  <span class="badge bg-label-success"
-                                    >Replied</span
-                                  >
-                                </td>
+                            <!-- Google Search Preview -->
+                            <h5 class="mt-4 mb-3">Google Search Preview</h5>
+                            <div class="google-preview mb-4">
+                              <div class="google-title" id="preview-title">
+                                Your Meta Title will appear here
+                              </div>
+                              <div class="google-url" id="preview-url">
+                                https://www.yoursite.com/
+                              </div>
+                              <div
+                                class="google-description"
+                                id="preview-description"
+                              >
+                                Your meta description will appear here
+                              </div>
+                            </div>
 
-                                <td>
-                                  <button
-                                    type="button"
-                                    class="btn btn-primary"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#backDropModalEnquiry"
-                                  >
-                                    Enquiry
-                                  </button>
-                                  &nbsp;
-                                  <button
-                                    class="btn btn-info"
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#backDropModalReply"
-                                  >
-                                    Reply
-                                  </button>
-                                </td>
+                            <!-- Open Graph -->
+                            <h5 class="mt-4 mb-3">
+                              Open Graph (Social Sharing)
+                            </h5>
+                            <div class="mb-3">
+                              <label class="form-label">OG Title</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="og_title"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">OG Description</label>
+                              <textarea
+                                class="form-control"
+                                name="og_description"
+                                rows="2"
+                              ></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">OG Image</label>
+                              <input
+                                type="file"
+                                class="form-control"
+                                name="og_image"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">OG URL</label>
+                              <input
+                                type="url"
+                                class="form-control"
+                                name="og_url"
+                                placeholder="https://www.yoursite.com/"
+                              />
+                            </div>
 
-                                <td>
-                                  <button
-                                    class="btn btn-danger"
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#backDropModalDeleteClass"
-                                  >
-                                    Delete
-                                  </button>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                            <!-- Twitter Card -->
+                            <h5 class="mt-4 mb-3">Twitter Card</h5>
+                            <div class="mb-3">
+                              <label class="form-label">Twitter Title</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="twitter_title"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label"
+                                >Twitter Description</label
+                              >
+                              <textarea
+                                class="form-control"
+                                name="twitter_description"
+                                rows="2"
+                              ></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Twitter Image</label>
+                              <input
+                                type="file"
+                                class="form-control"
+                                name="twitter_image"
+                              />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                              Save Settings
+                            </button>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -552,231 +586,6 @@
               </div>
             </div>
             <!-- / Content -->
-
-            <!-- Enquiry Modal -->
-            <div
-              class="modal fade"
-              id="backDropModalEnquiry"
-              data-bs-backdrop="static"
-              tabindex="-1"
-            >
-              <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="backDropModalTitle">Enquiry</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col d-flex justify-content-between mb-3">
-                        <p class="m-0 p-0 mb-2">
-                          <strong
-                            >Enquiry Date:
-                            <span class="badge bg-label-primary"
-                              >01-01-2025</span
-                            ></strong
-                          >
-                        </p>
-                        <p class="m-0 p-0">
-                          <strong
-                            >Name:
-                            <span
-                              class="badge bg-label-info"
-                              style="text-transform: capitalize"
-                              >Xyz Mnp</span
-                            ></strong
-                          >
-                        </p>
-
-                        <p class="m-0 p-0">
-                          <strong
-                            >Email:
-                            <span
-                              class="badge bg-label-success"
-                              style="text-transform: lowercase"
-                              >xyz@gmail.com</span
-                            ></strong
-                          >
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col mb-3">
-                        <p class="m-0 p-0 mb-2">
-                          <strong
-                            >Subject:
-                            <span
-                              class="badge bg-label-warning"
-                              style="text-transform: capitalize"
-                              >Lorem ipsum dolor sit amet consectetur
-                              adipisicing elit. Mollitia?</span
-                            ></strong
-                          >
-                        </p>
-
-                        <p class="m-0 p-0">
-                          <strong>Enquiry:</strong><br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Exercitationem velit, veritatis quia
-                          reprehenderit vel saepe totam modi adipisci provident
-                          pariatur!
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col">
-                        <p class="m-0 p-0 mb-2"><strong>Reply:</strong></p>
-                        <textarea
-                          name=""
-                          class="form-control"
-                          id=""
-                          rows="10"
-                        ></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Send Reply
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-            <!-- Reply Modal -->
-            <div
-              class="modal fade"
-              id="backDropModalReply"
-              data-bs-backdrop="static"
-              tabindex="-1"
-            >
-              <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="backDropModalTitle">Reply</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col d-flex justify-content-between mb-3">
-                        <p class="m-0 p-0 mb-2">
-                          <strong
-                            >Enquiry Date:
-                            <span class="badge bg-label-warning"
-                              >01-01-2025</span
-                            ></strong
-                          >
-                        </p>
-
-                        <p class="m-0 p-0 mb-2">
-                          <strong
-                            >Reply Date:
-                            <span class="badge bg-label-success"
-                              >01-01-2025</span
-                            ></strong
-                          >
-                        </p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col mb-3">
-                        <p>
-                          <strong>Subject:</strong>
-                          <br />
-                          Lorem ipsum dolor sit ame?
-                        </p>
-                        <p>
-                          <strong>Enquiry:</strong>
-                          <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quisquam, quae?
-                        </p>
-
-                        <p>
-                          <strong>Reply:</strong>
-                          <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quisquam, quae?
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-            <!-- Delete Enquiry Modal -->
-            <div
-              class="modal fade"
-              id="backDropModalDeleteClass"
-              data-bs-backdrop="static"
-              tabindex="-1"
-            >
-              <div class="modal-dialog modal-dialog-centered">
-                <form class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="backDropModalTitle">
-                      Delete Enquiry
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col mb-3">
-                        <p>
-                          Are you sure you want to delete this enquiry
-                          <span class="text-danger">Subject 1</span>?
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                  </div>
-                </form>
-              </div>
-            </div>
 
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
@@ -833,5 +642,28 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+      // Live Google Preview Update
+      const titleInput = document.getElementById("seo_title");
+      const descInput = document.getElementById("seo_description");
+      const urlInput = document.getElementById("canonical_url");
+
+      const previewTitle = document.getElementById("preview-title");
+      const previewDesc = document.getElementById("preview-description");
+      const previewUrl = document.getElementById("preview-url");
+
+      titleInput.addEventListener("input", () => {
+        previewTitle.textContent =
+          titleInput.value || "Your Meta Title will appear here";
+      });
+      descInput.addEventListener("input", () => {
+        previewDesc.textContent =
+          descInput.value || "Your meta description will appear here";
+      });
+      urlInput.addEventListener("input", () => {
+        previewUrl.textContent = urlInput.value || "https://www.yoursite.com/";
+      });
+    </script>
   </body>
 </html>
