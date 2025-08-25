@@ -191,6 +191,10 @@ p {
   color: var(--accent);
 }
 
+.nav-menu .active {
+  color: var(--accent);
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
